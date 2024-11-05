@@ -3,7 +3,6 @@ package com.consultorio;
 import org.junit.Before;
 import org.junit.Test;
 import java.time.LocalDateTime;
-
 import static org.junit.Assert.*;
 
 public class RelatorioConsultaTest {
@@ -22,9 +21,10 @@ public class RelatorioConsultaTest {
 
     @Test
     public void testGerarRelatorioConsulta() {
-        // Definindo feedback para a consulta
+        // Definindo feedback e pagamento para a consulta
         String feedback = "O paciente apresentou boa evolução e seguirá com o tratamento.";
         consulta.registrarFeedback(feedback);
+        consulta.registrarPagamento(200.0);
 
         // Execução do método para gerar o relatório
         String relatorio = consulta.gerarRelatorio();
@@ -34,7 +34,10 @@ public class RelatorioConsultaTest {
                 "Paciente: João\n" +
                 "Médico: Dra. Maria\n" +
                 "Data/Hora: 2024-11-10T15:30\n" +
-                "Feedback: O paciente apresentou boa evolução e seguirá com o tratamento.";
+                "Feedback: O paciente apresentou boa evolução e seguirá com o tratamento.\n" +
+                "Valor Pago: 200.0\n" +
+                "Pagamento Realizado: Sim";
+
         assertEquals(esperado, relatorio);
     }
 }

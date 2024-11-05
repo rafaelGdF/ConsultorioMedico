@@ -1,0 +1,9 @@
+com\consultorio\CadastroMedServiceTest.class
+com\consultorio\RegistroPagamentoTest.class
+com\consultorio\CadastroServiceTest.class
+com\consultorio\EnviarNotificacaoEmailTest.class
+com\consultorio\ConsultaFeedbackTest.class
+com\consultorio\EmitirReceitaTest.class
+com\consultorio\RelatorioConsultaTest.class
+com\consultorio\AgendarConsultaTest.class
+com\consultorio\ProntuarioPacienteTest.class
