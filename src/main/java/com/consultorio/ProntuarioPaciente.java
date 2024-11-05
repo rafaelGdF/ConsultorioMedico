@@ -13,8 +13,11 @@ public class ProntuarioPaciente {
     }
 
     public void adicionarObservacao(String observacao) {
-        if (!observacoes.contains(observacao)) {
-            observacoes.add(observacao);
+        // Verifica se a observação é nula ou vazia
+        if (observacao != null && !observacao.trim().isEmpty()) {
+            if (!observacoes.contains(observacao)) {
+                observacoes.add(observacao);
+            }
         }
     }
 
