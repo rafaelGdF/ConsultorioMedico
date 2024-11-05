@@ -9,9 +9,8 @@ public class Receita {
     public Receita(Medico medico, Paciente paciente, String medicamentos, String instrucoes) {
         if (medico == null || paciente == null ||
                 medico.getNome().isEmpty() || paciente.getNome().isEmpty() ||
-                medico.getCrm().isEmpty() || paciente.getEmail().isEmpty() ||
-                medicamentos.isEmpty()) {
-            throw new IllegalArgumentException("Todos os dados do médico, paciente, medicamentos e instruções devem ser fornecidos.");
+                medico.getCrm().isEmpty() || paciente.getEmail().isEmpty()) {
+            throw new IllegalArgumentException("Todos os dados do médico e paciente devem ser fornecidos com dados válidos.");
         }
         this.medico = medico;
         this.paciente = paciente;
